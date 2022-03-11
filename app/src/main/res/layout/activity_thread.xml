@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThreadActivity">
+
+    <Button
+        android:id="@+id/btn_start_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start thread"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_start_runnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start runnable"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_thread" />
+    <Button
+        android:id="@+id/btn_start_new_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="匿名类 new Thread"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_runnable" />
+    <Button
+        android:id="@+id/btn_start_handler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start handler"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_new_thread" />
+    <Button
+        android:id="@+id/btn_start_callable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start callable"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_handler" />
+
+    <Button
+        android:id="@+id/btn_no_semaphore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不使用 Semaphore"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_callable" />
+
+    <Button
+        android:id="@+id/btn_use_semaphore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用 Semaphore"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_no_semaphore" />
+
+    <Button
+        android:id="@+id/btn_start_handler_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start HandlerThread"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_use_semaphore" />
+    <Button
+        android:id="@+id/btn_stop_handler_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop HandlerThread"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_handler_thread" />
+</androidx.constraintlayout.widget.ConstraintLayout>

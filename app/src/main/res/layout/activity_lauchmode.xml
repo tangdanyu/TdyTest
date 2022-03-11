@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LaunchModeActivity">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SingleInstancePerTask"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="standard"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+    <Button
+        android:id="@+id/btn_singleTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="singleTop"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_standard" />
+    <Button
+        android:id="@+id/btn_singleTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="singleTask"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singleTop" />
+
+    <Button
+        android:id="@+id/btn_singleInstance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="singleInstance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singleTask" />
+    <Button
+        android:id="@+id/btn_singleInstancePerTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SingleInstancePerTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singleInstance" />
+
+    <Button
+        android:id="@+id/btn_FLAG_ACTIVITY_NEW_TASK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="FLAG_ACTIVITY_NEW_TASK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singleInstancePerTask" />
+    <Button
+        android:id="@+id/btn_FLAG_ACTIVITY_SINGLE_TOP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="FLAG_ACTIVITY_SINGLE_TOP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_FLAG_ACTIVITY_NEW_TASK" />
+    <Button
+        android:id="@+id/btn_FLAG_ACTIVITY_CLEAR_TOP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="FLAG_ACTIVITY_CLEAR_TOP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_FLAG_ACTIVITY_SINGLE_TOP" />
+    <Button
+        android:id="@+id/btn_FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_FLAG_ACTIVITY_CLEAR_TOP" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

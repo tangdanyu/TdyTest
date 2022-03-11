@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tdytest">
+    <!-- 前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TdyTest">
+        <activity
+            android:name=".broadcast.BroadcastActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".service.MyForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".service.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimeTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".thrid.adapter.AdapterDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".thrid.ThirdOpenSourceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThreadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HandlerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FlagActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SingleInstancePerTaskActivity"
+            android:exported="true"
+            android:launchMode="singleInstancePerTask" />
+        <activity
+            android:name=".activity.StandardActivity"
+            android:exported="true"
+            android:launchMode="standard" />
+        <activity
+            android:name=".activity.SingleInstanceActivity"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".activity.SingleTaskActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.SingleTopActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.LaunchModeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LifeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BaseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.DialogActivity"
+            android:exported="true"
+            android:theme="@style/dialog_style" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 开启定时任务 -->
+        <service android:name=".service.AlarmService" />
+        <service
+            android:name=".service.SimpleService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+        <!-- 闹钟广播 -->
+        <receiver android:name=".receiver.AlarmReceiver" />
+        <receiver android:name=".receiver.MyBroadcastReceiver"  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
